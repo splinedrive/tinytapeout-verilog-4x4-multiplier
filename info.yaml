@@ -1,38 +1,41 @@
---- 
+---
 # TinyTapeout project information
 #
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
 # it does and how to operate it.
 #
 # This will be automatically collected and used to make a datasheet for the chip.
-project: 
-  author:       ""      # Your name
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
+project:
+  author:       "Hirosh Dabui"      # Your name
+  title:        "4-bit-asychronous multiplier"      # Project title
+  description:  "Asychronous 4-bit multiplier that return 8-bit"      # Short description of what your project does
+  how_it_works: "2x4bit operands and 8bit result"      # Longer description of how the project works
+  how_to_test:  "Feed the 4-bit-operands and get the multiplication"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "2x4-switches and 8 leds"      # Describe any external hardware needed
+  doc_link:     "https://github.com/splinedrive/tinytapeout-verilog-4x4-multiplier/blob/main/README.md"      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required)
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
-  wokwi_id:     0       # the wokwi ID
-  picture:      ""      # relative path to a picture in your repository
+  wokwi_id:    341493393195532884        # the wokwi ID
+  picture:      "gds_4x4_mul.svg"      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - clock
-    - reset
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - input a0
+    - input a1
+    - input a2
+    - input a0
+    - input b1
+    - input b2
+    - input b3
+    - input b3
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - none
+    - output c[0]         # a description of what the outputs do
+    - output c[1]
+    - output c[2]
+    - output c[3]
+    - output c[4]
+    - output c[5]
+    - output c[6]
+    - output c[7]
+
+
+
 
